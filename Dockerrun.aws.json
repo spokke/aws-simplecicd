@@ -3,25 +3,25 @@
 	"containerDefinitions": [
 	  {
 		"name": "client",
-		"image": "client",
+		"image": "estudio05/client",
 		"hostname": "client",
 		"essential": false
 	  },
 	  {
 		"name": "admin",
-		"image": "admin",
+		"image": "estudio05/admin",
 		"hostname": "client",
 		"essential": false
 	  },
 	  {
 		"name": "db",
-		"image": "db",
+		"image": "estudio05/db",
 		"hostname": "client",
 		"essential": true
 	  },
 	  {
 		"name": "proxy",
-		"image": "proxy",
+		"image": "estudio05/proxy",
 		"hostname": "proxy",
 		"essential": false,
 		"portMappings": [
@@ -31,6 +31,5 @@
 		}],
 		"links": ["client","admin"]
 	  }
-]
-
+	]
 }
