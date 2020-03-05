@@ -1,0 +1,36 @@
+{
+	"AWSEBDockerrunVersion": 2,
+	"containerDefinitions": [
+	  {
+		"name": "client",
+		"image": "client",
+		"hostname": "client",
+		"essential": false
+	  },
+	  {
+		"name": "admin",
+		"image": "admin",
+		"hostname": "client",
+		"essential": false
+	  },
+	  {
+		"name": "db",
+		"image": "db",
+		"hostname": "client",
+		"essential": true
+	  },
+	  {
+		"name": "proxy",
+		"image": "proxy",
+		"hostname": "proxy",
+		"essential": false,
+		"portMappings": [
+		{
+			"hostPort": 8080,
+			"containerPort": 80
+		}],
+		"links": ["client","admin"]
+	  }
+]
+
+}
