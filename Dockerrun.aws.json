@@ -7,6 +7,11 @@
 		"hostname": "client",
 		"essential": false,
 		"memory": 128
+		"portMappings": [
+		{
+			"hostPort": 8081,
+			"containerPort": 8081
+		}],
 	  },
 	  {
 		"name": "admin",
@@ -14,6 +19,11 @@
 		"hostname": "client",
 		"essential": false,
 		"memory": 128
+		"portMappings": [
+		{
+			"hostPort": 8082,
+			"containerPort": 8082
+		}],
 	  },
 	  {
 		"name": "db",
@@ -33,6 +43,19 @@
 			"containerPort": 80
 		}],
 		"links": ["client","admin"],
+		"memory": 128
+	  },
+	  {
+		"name": "adminer",
+		"image": "adminer",
+		"hostname": "adminer",
+		"essential": false,
+		"portMappings": [
+		{
+			"hostPort": 8083,
+			"containerPort": 8083
+		}],
+		"links": ["db"],
 		"memory": 128
 	  }
 	]
