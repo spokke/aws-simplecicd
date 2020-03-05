@@ -13,3 +13,16 @@ after_success:
   - docker build -t admin -f ./admin/Dockerfile.dev ./admin
   - docker build -t db -f ./db/Dockerfile.dev ./db
   - docker build -t proxy -f ./proxy/Dockerfile.dev ./proxy
+
+deploy:
+  provider: elasticbeanstalk
+  region: us-east-1
+  app: simple-cicd
+  env: SimpleCicd-env
+  bucket_name: elasticbeanstalk-us-east-1-773802911651
+  bucket_path: simple-cicd
+  on:
+    branc: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_key_id: 
+    secure: $AWS_SECRET_KEY
