@@ -6,24 +6,24 @@
 		"image": "estudio05/client",
 		"hostname": "client",
 		"essential": false,
-		"memory": 128
+		"memory": 128,
 		"portMappings": [
 		{
 			"hostPort": 8081,
 			"containerPort": 8081
-		}],
+		}]
 	  },
 	  {
 		"name": "admin",
 		"image": "estudio05/admin",
 		"hostname": "client",
 		"essential": false,
-		"memory": 128
+		"memory": 128,
 		"portMappings": [
 		{
 			"hostPort": 8082,
 			"containerPort": 8082
-		}],
+		}]
 	  },
 	  {
 		"name": "db",
