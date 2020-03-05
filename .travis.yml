@@ -14,15 +14,24 @@ after_success:
   - docker build -t db -f ./db/Dockerfile.dev ./db
   - docker build -t proxy -f ./proxy/Dockerfile.dev ./proxy
 
-deploy:
-  provider: elasticbeanstalk
-  region: "us-east-1"
-  app: "simple-cicd"
-  env: "SimpleCicd-env"
-  bucket_name: "elasticbeanstalk-us-east-1-773802911651"
-  bucket_path: "simple-cicd"
-  on:
-    branc: "master"
-  access_key_id: "$AWS_ACCESS_KEY"
-  secret_access_key: 
-    secure: "$AWS_SECRET_KEY"
+  # Login to Docker Hub
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+
+  # Push Images
+  - docker push estudio05/client
+  - docker push estudio05/admin
+  - docker push estudio05/db
+  - docker push estudio05/proxy
+
+#deploy:
+#  provider: elasticbeanstalk
+#  region: "us-east-1"
+#  app: "simple-cicd"
+#  env: "SimpleCicd-env"
+#  bucket_name: "elasticbeanstalk-us-east-1-773802911651"
+#  bucket_path: "simple-cicd"
+#  on:
+#    branc: "master"
+#  access_key_id: "$AWS_ACCESS_KEY"
+#  secret_access_key: 
+#    secure: "$AWS_SECRET_KEY"
