@@ -1,0 +1,18 @@
+{
+    "name": "client-server",
+    "version": "1.0.0",
+    "description": "Client Web Server with Node.js",
+    "main": "index.js",
+    "scripts": {
+      "start": "node index.js",
+      "dev": "nodemon",
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "Marcelo Marques",
+    "license": "MIT",
+    "dependencies": {
+      "express": "*",
+      "nodemon": "*"
+    }
+  }
