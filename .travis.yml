@@ -10,6 +10,6 @@ script: skip
 
 after_success:
   - docker build -t client -f ./client/Dockerfile.dev ./client
-  - docker build -t admin -f ./client/Dockerfile.dev ./admin
-  - docker build -t db -f ./client/Dockerfile.dev ./db
-  - docker build -t proxy -f ./client/Dockerfile.dev ./proxy
+  - docker build -t admin -f ./admin/Dockerfile.dev ./admin
+  - docker build -t db -f ./db/Dockerfile.dev ./db
+  - docker build -t proxy -f ./proxy/Dockerfile.dev ./proxy
