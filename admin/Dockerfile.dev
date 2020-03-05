@@ -1,8 +1,7 @@
-FROM node:alpine
+FROM golang:alpine
 
-WORKDIR /app
-COPY ./package.json ./
-RUN npm install
-COPY . .
-EXPOSE 8081
-CMD ["npm", "run", "dev"]
+WORKDIR /go
+RUN apk add git && go get github.com/lib/pq
+COPY ./app .
+EXPOSE 8082
+CMD ["go", "run", "./src/main.go"]
