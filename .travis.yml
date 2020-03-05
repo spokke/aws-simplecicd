@@ -16,13 +16,13 @@ after_success:
 
 deploy:
   provider: elasticbeanstalk
-  region: us-east-1
-  app: simple-cicd
-  env: SimpleCicd-env
-  bucket_name: elasticbeanstalk-us-east-1-773802911651
-  bucket_path: simple-cicd
+  region: "us-east-1"
+  app: "simple-cicd"
+  env: "SimpleCicd-env"
+  bucket_name: "elasticbeanstalk-us-east-1-773802911651"
+  bucket_path: "simple-cicd"
   on:
-    branc: master
-  access_key_id: $AWS_ACCESS_KEY
+    branc: "master"
+  access_key_id: "$AWS_ACCESS_KEY"
   secret_access_key: 
-    secure: $AWS_SECRET_KEY
+    secure: "$AWS_SECRET_KEY"
