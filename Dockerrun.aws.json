@@ -5,19 +5,22 @@
 		"name": "client",
 		"image": "estudio05/client",
 		"hostname": "client",
-		"essential": false
+		"essential": false,
+		"memory": 128
 	  },
 	  {
 		"name": "admin",
 		"image": "estudio05/admin",
 		"hostname": "client",
-		"essential": false
+		"essential": false,
+		"memory": 128
 	  },
 	  {
 		"name": "db",
 		"image": "estudio05/db",
 		"hostname": "client",
-		"essential": true
+		"essential": true,
+		"memory": 128
 	  },
 	  {
 		"name": "proxy",
@@ -29,7 +32,8 @@
 			"hostPort": 8080,
 			"containerPort": 80
 		}],
-		"links": ["client","admin"]
+		"links": ["client","admin"],
+		"memory": 128
 	  }
 	]
 }
