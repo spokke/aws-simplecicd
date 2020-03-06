@@ -16,7 +16,7 @@
 	  {
 		"name": "admin",
 		"image": "estudio05/admin",
-		"hostname": "client",
+		"hostname": "admin",
 		"essential": false,
 		"memory": 128,
 		"portMappings": [
