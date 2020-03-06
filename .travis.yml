@@ -27,10 +27,10 @@ deploy:
   edge: true
   provider: elasticbeanstalk
   region: "us-east-1"
-  app: "simple-cicd"
+  app: "simplecicd"
   env: "SimpleCicd-env"
   bucket_name: "elasticbeanstalk-us-east-1-773802911651"
-  bucket_path: "simple-cicd"
+  bucket_path: "simplecicd"
   on:
     branc: "master"
   access_key_id: "$AWS_ACCESS_KEY"
