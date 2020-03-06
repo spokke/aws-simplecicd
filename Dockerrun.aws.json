@@ -28,7 +28,7 @@
 	  {
 		"name": "db",
 		"image": "estudio05/db",
-		"hostname": "client",
+		"hostname": "db",
 		"essential": true,
 		"memory": 128
 	  },
