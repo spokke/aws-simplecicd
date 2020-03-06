@@ -28,7 +28,7 @@ deploy:
   provider: elasticbeanstalk
   region: "us-east-1"
   app: "simplecicd"
-  env: "SimpleCicd-env"
+  env: "Simplecicd-env"
   bucket_name: "elasticbeanstalk-us-east-1-773802911651"
   bucket_path: "simplecicd"
   on:
