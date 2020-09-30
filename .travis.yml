@@ -9,19 +9,19 @@ before_install:
 script: skip
 
 after_success:
-  - docker build -t estudio05/client -f ./client/Dockerfile.dev ./client
-  - docker build -t estudio05/admin -f ./admin/Dockerfile.dev ./admin
-  - docker build -t estudio05/db -f ./db/Dockerfile.dev ./db
-  - docker build -t estudio05/proxy -f ./proxy/Dockerfile.dev ./proxy
+  - docker build -t esblink/client -f ./client/Dockerfile.dev ./client
+  - docker build -t esblink/admin -f ./admin/Dockerfile.dev ./admin
+  - docker build -t esblink/db -f ./db/Dockerfile.dev ./db
+  - docker build -t esblink/proxy -f ./proxy/Dockerfile.dev ./proxy
 
   # Login to Docker Hub
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 
   # Push Images
-  - docker push estudio05/client
-  - docker push estudio05/admin
-  - docker push estudio05/db
-  - docker push estudio05/proxy
+  - docker push esblink/client
+  - docker push esblink/admin
+  - docker push esblink/db
+  - docker push esblink/proxy
 
 deploy:
   edge: true
