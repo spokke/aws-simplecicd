@@ -27,7 +27,7 @@ deploy:
   edge: true
   provider: elasticbeanstalk
   region: "eu-south-1"
-  app: "simplecicd"
+  app: "esblink-cicd"
   env: "EsblinkCicd-env"
   bucket_name: "elasticbeanstalk-eu-south-1-468230665830"
   bucket_path: "cicd"
